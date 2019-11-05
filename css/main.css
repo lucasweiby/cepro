@@ -1,0 +1,841 @@
+@import url("../assets/fonts/bw-modelica/style.css");
+.top {
+  padding: 16px 0;
+}
+.top .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+  .top .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.top .container .logo {
+  width: 200px;
+}
+@media screen and (max-width: 480px) {
+  .top .container .logo {
+    margin-bottom: 16px;
+  }
+}
+.top .container .logo-desktop {
+  display: block;
+}
+@media screen and (max-width: 480px) {
+  .top .container .logo-desktop {
+    display: none;
+  }
+}
+.top .container .logo-mobile {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .top .container .logo-mobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .top .container .logo-mobile .logo {
+    width: 128px;
+  }
+}
+.top .container .address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  width: auto;
+  font-size: 14px;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .top .container .address {
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .top .container .address {
+    font-size: 11px;
+  }
+}
+.top .container .address .icon {
+  margin-right: 4px;
+  height: 16px;
+}
+.top .container .social {
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top .container .social-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.top .container .social-item:not(:last-child) {
+  margin-right: 8px;
+}
+.top .container .social-item:hover {
+  background-color: #65ACDA;
+}
+.top .container .social-item:hover .social-link {
+  color: #fff;
+  text-decoration: none;
+}
+.top .container .social-link {
+  color: #65ACDA;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.navbar {
+  background-color: #26255D;
+  padding: 0;
+}
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 16px 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar-toggler {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+  }
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .nav-item, .navbar li {
+  padding: 12px 4px;
+  position: relative;
+}
+.navbar .nav-item:not(:last-child), .navbar li:not(:last-child) {
+  margin-right: 8px;
+}
+.navbar .nav-item::after, .navbar li::after {
+  content: " ";
+  width: 0px;
+  height: 4px;
+  background-color: #65ACDA;
+  -ms-transform-origin: center center;
+  -moz-transform-origin-x: center center;
+  -webkit-transform-origin-x: center center;
+  -o-transform-origin-x: center center;
+  transform-origin: center center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar .nav-item .nav-link, .navbar .nav-item a, .navbar li .nav-link, .navbar li a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar .nav-item .nav-link:focus, .navbar .nav-item a:focus, .navbar li .nav-link:focus, .navbar li a:focus {
+  color: #65ACDA;
+}
+.navbar .nav-item:hover, .navbar .nav-item:focus, .navbar li:hover, .navbar li:focus {
+  background-color: #fff;
+}
+.navbar .nav-item:hover::after, .navbar .nav-item:focus::after, .navbar li:hover::after, .navbar li:focus::after {
+  -ms-transform-origin: center center;
+  -moz-transform-origin-x: center center;
+  -webkit-transform-origin-x: center center;
+  -o-transform-origin-x: center center;
+  transform-origin: center center;
+  width: 100%;
+}
+.navbar .nav-item:hover .nav-link, .navbar .nav-item:hover a, .navbar .nav-item:focus .nav-link, .navbar .nav-item:focus a, .navbar li:hover .nav-link, .navbar li:hover a, .navbar li:focus .nav-link, .navbar li:focus a {
+  color: #26255D;
+  text-decoration: none;
+}
+.navbar .search {
+  position: relative;
+}
+.navbar .search #search {
+  width: calc(256px + 64px);
+  padding: 8px 16px;
+  border-radius: 32px;
+  border: none;
+}
+.navbar .search #search::placeholder {
+  color: #656565;
+  font-family: "Bw Modelica Light Italic";
+}
+@media screen and (max-width: 480px) {
+  .navbar .search #search {
+    width: 256px;
+  }
+}
+.navbar .search .submit {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: #5C5D25;
+  color: #fff;
+  transform-origin: center center;
+  position: absolute;
+  top: 10%;
+  right: 4px;
+}
+
+.home {
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .carousel {
+  width: 100%;
+  height: auto;
+}
+.home .carousel .slide {
+  width: 100%;
+  height: 512px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(30, 30, 30, 0.3);
+  background-image: url("../assets/img/banner@2x.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+@media screen and (max-width: 480px) {
+  .home .carousel .slide {
+    padding: 0 32px;
+    height: 320px;
+  }
+}
+.home .carousel .slide-title {
+  font-family: "Bw Modelica ExtraBold";
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 480px) {
+  .home .carousel .slide-title {
+    font-size: 32px;
+  }
+}
+.home .carousel .slide-link {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.home .carousel .slide-link:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #26255D;
+}
+@media screen and (max-width: 480px) {
+  .home .carousel .slide-link {
+    font-size: 14px;
+  }
+}
+.home .arrows {
+  width: 90%;
+  height: auto;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.home .arrows .prev, .home .arrows .next {
+  cursor: pointer;
+}
+.home .arrows .prev img, .home .arrows .next img {
+  height: 32px;
+}
+
+.about {
+  padding: 64px 0;
+}
+.about .title {
+  font-family: "Bw Modelica Bold";
+  font-size: 48px;
+  color: #26255D;
+}
+@media screen and (max-width: 480px) {
+  .about .title {
+    font-size: 32px;
+    margin-top: 16px;
+  }
+}
+.about .text {
+  margin-bottom: 0;
+  color: #656565;
+  font-family: "Bw Modelica Light";
+}
+@media screen and (max-width: 480px) {
+  .about .text {
+    font-size: 14px;
+  }
+}
+
+.numbers {
+  padding: 64px 0;
+  background-color: #65ACDA;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (max-width: 480px) {
+  .numbers .col-md-4 {
+    margin-bottom: 32px;
+  }
+}
+.numbers .number {
+  font-family: "Bw Modelica Black";
+  margin-bottom: 0;
+}
+.numbers .desc {
+  font-family: "Bw Modelica Light";
+  margin-bottom: 0;
+}
+
+.specialities {
+  padding: 64px 0;
+}
+.specialities .section-title {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #BBBCBD;
+  text-transform: uppercase;
+  font-family: "Bw Modelica ExtraBold";
+  color: #26255D;
+  margin-bottom: 32px;
+}
+.specialities .card {
+  padding: 32px;
+  border: none;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  min-height: calc(256px + 128px);
+  border-bottom: 4px solid #65ACDA;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media screen and (max-width: 480px) {
+  .specialities .card {
+    margin-bottom: 16px;
+  }
+}
+.specialities .card .icon {
+  width: 56px;
+  margin-bottom: 16px;
+}
+.specialities .card .title {
+  text-transform: uppercase;
+  color: #65ACDA;
+  font-family: "Bw Modelica ExtraBold";
+  margin-bottom: 16px;
+}
+.specialities .card .text {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-family: "Bw Modelica Light";
+}
+.specialities .card .link {
+  color: #65ACDA;
+  border: 2px solid #65ACDA;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-size: 14px;
+  border-radius: 32px;
+}
+.specialities .card .link:hover {
+  text-decoration: none;
+  background-color: #65ACDA;
+  color: #fff;
+}
+.specialities .card:hover {
+  transform: scale(1.02);
+}
+
+.team {
+  padding: 64px 0;
+  background-color: #AFBAC1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team .section-title {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+  font-family: "Bw Modelica ExtraBold";
+  color: #fff;
+  margin-bottom: 32px;
+}
+.team .card {
+  padding: 32px;
+  border: none;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  min-height: calc(256px + 128px);
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-align: center;
+}
+.team .card .icon {
+  width: 200px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+}
+.team .card .title {
+  text-transform: uppercase;
+  color: #26255D;
+  font-family: "Bw Modelica ExtraBold";
+  margin-bottom: 4px;
+}
+.team .card .subtitle {
+  color: #5C5D25;
+  font-family: "Bw Modelica Light";
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.team .card .text {
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-family: "Bw Modelica Light";
+}
+.team .card .link {
+  color: #26255D;
+  border: 2px solid #26255D;
+  padding: 4px 16px;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-size: 10px;
+  border-radius: 32px;
+  margin-bottom: 16px;
+}
+.team .card .link:hover {
+  text-decoration: none;
+  background-color: #26255D;
+  color: #fff;
+}
+.team .card .social {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+}
+.team .card .social-item {
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.team .card .social-item:not(:last-child) {
+  margin-right: 8px;
+}
+.team .card .social-item:hover {
+  background-color: #5C5D25;
+}
+.team .card .social-item:hover .social-link {
+  color: #fff;
+}
+.team .card .social-link {
+  color: #5C5D25;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.team .arrows {
+  width: 64%;
+  height: auto;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+.team .arrows .prev-team, .team .arrows .next-team {
+  cursor: pointer;
+}
+.team .arrows .prev-team img, .team .arrows .next-team img {
+  height: 32px;
+}
+@media screen and (max-width: 480px) {
+  .team .arrows {
+    display: none;
+  }
+}
+
+.blog {
+  padding: 64px 0;
+}
+.blog .container {
+  position: relative;
+}
+.blog .box-title {
+  position: relative;
+}
+.blog .box-title .section-title {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #BBBCBD;
+  text-transform: uppercase;
+  font-family: "Bw Modelica ExtraBold";
+  color: #26255D;
+  margin-bottom: 32px;
+}
+.blog .box-title .blog-link {
+  color: #26255D;
+  border: 2px solid #26255D;
+  padding: 4px 16px;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-size: 12px;
+  border-radius: 32px;
+  margin-bottom: 16px;
+  position: absolute;
+  bottom: calc(16px + 8px);
+  right: 16px;
+}
+.blog .box-title .blog-link:hover {
+  text-decoration: none;
+  background-color: #26255D;
+  color: #fff;
+}
+.blog .card {
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+  min-height: 460px;
+}
+@media screen and (max-width: 480px) {
+  .blog .card {
+    min-height: 0;
+    margin-bottom: 16px;
+  }
+}
+.blog .card-img-top {
+  width: 100%;
+  height: 180px;
+  border-radius: 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.blog .card-body {
+  padding: 32px;
+}
+.blog .card-title {
+  font-family: "Bw Modelica Bold";
+  color: #65ACDA;
+  margin-bottom: 0;
+}
+.blog .card-meta {
+  text-transform: uppercase;
+  color: #BBBCBD;
+  font-family: "Bw Modelica Light";
+}
+.blog .card-text {
+  margin-top: 8px;
+  font-family: "Bw Modelica Light";
+}
+.blog .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+  padding: 64px 0;
+  background-color: #65ACDA;
+}
+.contact .section-title {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #fff;
+  text-transform: uppercase;
+  font-family: "Bw Modelica ExtraBold";
+  color: #fff;
+  margin-bottom: 16px;
+}
+.contact .text {
+  font-family: "Bw Modelica Light";
+  color: #fff;
+}
+.contact .address {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 480px) {
+  .contact .address {
+    margin-bottom: 32px;
+    flex-direction: row;
+  }
+  .contact .address span {
+    display: none;
+  }
+}
+.contact .address-item {
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@media screen and (max-width: 480px) {
+  .contact .address-item {
+    font-size: 16px;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+  .contact .address-item:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .contact .address-item {
+    font-size: 16px;
+  }
+}
+.contact .address-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.contact .address-item i {
+  width: 12px;
+  text-align: center;
+  margin-right: 8px;
+}
+@media screen and (max-width: 480px) {
+  .contact .address-item i {
+    margin: 0;
+    width: auto;
+  }
+}
+.contact .address-item:hover {
+  transform: translateX(4px);
+}
+.contact .form {
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+.contact .form .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.contact .form input, .contact .form select {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #65ACDA;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contact .form input::placeholder, .contact .form select::placeholder {
+  color: #BBBCBD;
+  font-family: "Bw Modelica Light Italic";
+}
+.contact .form input:focus, .contact .form select:focus {
+  border-color: #26255D;
+  outline: none;
+}
+.contact .form textarea {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #65ACDA;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+}
+.contact .form textarea::placeholder {
+  color: #BBBCBD;
+  font-family: "Bw Modelica Light Italic";
+}
+.contact .form textarea:focus {
+  border-color: #26255D;
+  outline: none;
+}
+.contact .form .btn-form {
+  width: 100%;
+  border: none;
+  padding: 8px 16px;
+  background-color: #65ACDA;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.contact .form .btn-form:hover {
+  background-color: #26255D;
+  transform: translateY(-4px);
+}
+
+.footer {
+  padding: 32px 0;
+  background-color: #656565;
+}
+.footer-title {
+  text-transform: uppercase;
+  font-family: "Bw Modelica Bold";
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #BBBCBD;
+}
+@media screen and (max-width: 480px) {
+  .footer-title {
+    text-align: center;
+  }
+}
+.footer-logo {
+  width: 200px;
+}
+@media screen and (max-width: 480px) {
+  .footer-logo {
+    display: block;
+    margin: 0 auto 32px;
+    width: 256px;
+  }
+}
+.footer .row-top {
+  border-bottom: 1px solid #BBBCBD;
+  padding-bottom: 16px;
+}
+.footer .row-bottom {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #BBBCBD;
+  letter-spacing: 2px;
+  padding-top: 8px;
+}
+@media screen and (max-width: 480px) {
+  .footer .row-bottom {
+    text-align: center;
+  }
+}
+.footer .row-bottom .text-right-cepro {
+  text-align: right;
+}
+@media screen and (max-width: 480px) {
+  .footer .row-bottom .text-right-cepro {
+    text-align: center;
+    margin-top: 4px;
+  }
+}
+.footer .row-bottom .author {
+  color: #BBBCBD;
+  font-family: "Bw Modelica Bold";
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer .row-bottom .author:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .fast-access {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .footer .fast-access {
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+}
+.footer .fast-access-item {
+  padding: 0 0 4px 0;
+  position: relative;
+}
+.footer .fast-access-item:not(:last-child) {
+  margin-right: 16px;
+}
+@media screen and (max-width: 480px) {
+  .footer .fast-access-item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+.footer .fast-access-item::after {
+  content: " ";
+  width: 0px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer .fast-access-item:hover::after {
+  width: 100%;
+}
+.footer .fast-access-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Bw Modelica Regular";
+  font-size: 14px;
+}
+.footer .fast-access-link:hover {
+  text-decoration: none;
+}
+.footer .social {
+  margin-bottom: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .social-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.footer .social-item:not(:last-child) {
+  margin-right: 8px;
+}
+.footer .social-item:hover {
+  background-color: #fff;
+}
+.footer .social-item:hover .social-link {
+  color: #656565;
+  text-decoration: none;
+}
+.footer .social-link {
+  color: #fff;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+body, html {
+  font-family: "Bw Modelica Regular";
+  scroll-behavior: smooth;
+}
+
+/*# sourceMappingURL=main.css.map */

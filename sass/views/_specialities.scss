@@ -1,0 +1,64 @@
+.specialities {
+    padding: 64px 0;
+
+    .section-title {
+        padding-bottom: 8px;
+        border-bottom: 1px solid $light-grey;
+        text-transform: uppercase;
+        font-family: $bw-eb;
+        color: $blue;
+        margin-bottom: 32px;
+    }
+
+    .card {
+        padding: 32px;
+        border: none;
+        box-shadow: 0 0 16px rgba($color: #000, $alpha: 0.1);
+        align-items: flex-start;
+        min-height: calc(256px + 128px);
+        border-bottom: 4px solid $light-blue;
+        transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        @include mobile {
+            margin-bottom: 16px;
+        }
+
+        .icon {
+            width: 56px;
+            margin-bottom: 16px;
+        }
+
+        .title {
+            text-transform: uppercase;
+            color: $light-blue;
+            font-family: $bw-eb;
+            margin-bottom: 16px;
+        }
+
+        .text {
+            margin-bottom: 16px;
+            font-size: 14px;
+            font-family: $bw-lt;
+        }
+
+        .link {
+            color: $light-blue;
+            border: 2px solid $light-blue;
+            padding: 8px 16px;
+            text-transform: uppercase;
+            transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            font-size: 14px;
+            border-radius: 32px;
+            
+            &:hover {
+                text-decoration: none;
+                background-color: $light-blue;
+                color: #fff;
+            }
+        }
+        
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}

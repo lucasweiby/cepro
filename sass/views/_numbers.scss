@@ -1,0 +1,22 @@
+.numbers {
+    padding: 64px 0;
+    background-color: $light-blue;
+    text-align: center;
+    color: #fff;
+
+    .col-md-4 {
+        @include mobile {
+            margin-bottom: 32px;
+        }
+    }
+
+    .number {
+        font-family: $bw-bl;
+        margin-bottom: 0;
+    }
+
+    .desc {
+        font-family: $bw-lt;
+        margin-bottom: 0;
+    }
+}

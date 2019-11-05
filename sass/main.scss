@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'views/nav';
+@import 'views/home';
+@import 'views/about';
+@import 'views/numbers';
+@import 'views/specialities';
+@import 'views/team';
+@import 'views/blog';
+@import 'views/contact';
+@import 'views/footer';
+
+body, html {
+    font-family: $bw;
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,90 @@
+.blog {
+    padding: 64px 0;
+
+    .container {
+        position: relative;
+    }
+
+    .box-title {
+        position: relative;
+
+        .section-title {
+            padding-bottom: 8px;
+            border-bottom: 1px solid $light-grey;
+            text-transform: uppercase;
+            font-family: $bw-eb;
+            color: $blue;
+            margin-bottom: 32px;
+        }
+
+        .blog-link {
+            color: $blue;
+            border: 2px solid $blue;
+            padding: 4px 16px;
+            text-transform: uppercase;
+            transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            font-size: 12px;
+            border-radius: 32px;
+            margin-bottom: 16px;
+            position: absolute;
+            bottom: calc(16px + 8px);
+            right: 16px;
+            &:hover {
+                text-decoration: none;
+                background-color: $blue;
+                color: #fff;
+            }
+        }
+    }
+
+    .card {
+        border: none;
+        border-radius: 6px;
+        box-shadow: 0 0 16px rgba($color: #000000, $alpha: 0.1);
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+        min-height: 460px;
+
+        @include mobile {
+            min-height: 0;
+            margin-bottom: 16px;
+        }
+
+        &-img-top {
+            width: 100%;
+            height: 180px;
+            border-radius: 0;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &-body {
+            padding: 32px;
+        }
+
+        &-title {
+            font-family: $bw-b;
+            color: $light-blue;
+            margin-bottom: 0;
+        }
+
+        &-meta {
+            text-transform: uppercase;
+            color: $light-grey;
+            font-family: $bw-lt;
+        }
+
+        &-text {
+            margin-top: 8px;
+            font-family: $bw-lt;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.1);
+        }
+    }
+}

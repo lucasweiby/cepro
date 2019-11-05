@@ -1,0 +1,22 @@
+.about {
+    padding: 64px 0;
+
+    .title {
+        font-family: $bw-b;
+        font-size: 48px;
+        color: $blue;
+        @include mobile {
+            font-size: 32px;
+            margin-top: 16px;
+        }
+    }
+
+    .text {
+        margin-bottom: 0;
+        color: $grey;
+        font-family: $bw-lt;
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+}
